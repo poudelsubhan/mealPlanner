@@ -1,0 +1,100 @@
+Eggs Benedict, 1, 68, 575, 33, 62, 24, 15
+Polenta Squares, 1, 69, 467, 27, 72, 8, 20
+Salmon Omelet, 1, 70, 560, 64, 13, 28, 10
+Avocado and Egg Sandwiches, 1, 73, 289, 16, 29, 13, 15
+Eggs and Tomato Melts, 1, 74, 335, 27, 31, 13, 10
+Ham and Cheese Bake, 1, 75, 273, 26, 6, 17, 20
+Huevos Rancheros, 1, 76, 438, 24, 26, 26, 10
+Oatmeal with Yogurt, 1, 78, 292, 17, 31, 12, 5
+Banana Oatcakes, 1, 79, 357, 30, 47, 6, 10
+Blueberry-Banana Smoothie, 1, 80, 228, 12, 31, 7, 10
+Sweet Potato Pancakes, 1, 83, 506, 39, 63, 11, 10
+French Toast, 1, 84, 510, 43, 46, 18, 10
+Butter-Banana Smoothie, 1, 85, 505, 33, 46, 25, 5
+Classic Cobb Salad, 2, 88, 446, 40, 23, 23, 20
+Coconut Chicken Salad, 2, 91, 454, 31, 36, 21, 15
+Santa Fe Taco Salad, 2, 92, 347, 22, 28, 18, 25
+Protein Salad, 2, 94, 349, 30, 29, 15, 20
+Tropical Chicken Salad, 2, 95, 323, 42, 22, 9, 25
+Mediterranean Salad, 2, 96, 171, 10, 11, 9, 15
+Supergreen Salad, 2, 99, 420, 17, 18, 33, 10
+Low-fat Tzatziki, 3, 100, 12, 1, 1, 0, 5
+Jalapeno-Cilantro Dressing, 3, 101, 38, 2, 3, 2, 5
+Red Wine Vinaigrette, 3, 102, 123, 0, 0, 14, 5
+Cucumber Ranch Dressing, 3, 103, 42, 2, 4, 2, 5
+Carrot-Ginger Soup, 4, 106, 170, 6, 21, 7, 15
+Lentil Soup with Chicken, 4, 108, 318, 35, 39, 2, 55
+Supremely Spicy Chili, 4, 109, 460, 37, 36, 18, 150
+Black Bean Soup, 4, 111, 309, 20, 47, 5, 55
+Chicken Enchilada Soup, 4, 112, 429, 42, 41, 10, 20
+Chicken Pot Pie Soup, 4, 113, 385, 37, 43, 7, 20
+White Bean Soup, Turkey Sausage, 4, 114, 351, 34, 20, 16, 20
+Chicken Salad Sandwich, 5, 116, 283, 28, 27, 7, 5
+Italian Sloppy Joe, 5, 117, 373, 32, 31, 15, 250
+French Dip Sandwiches, 5, 119, 324, 35, 24, 10, 600
+Turkey Taco Lettuce Wraps, 5, 120, 196, 22, 4, 8, 25
+Avocado-Egg Salad Sandwich, 5, 122, 303, 15, 29, 15, 5
+Cuban Sandwich Quesadilla, 5, 125, 280, 22, 22, 12, 5
+Baguette with Beef and Others, 5, 124, 292, 21, 30, 9, 5
+Green N Mean Salsa, 6, 128, 128, 2, 15, 7, 10
+Perfect Spicy Guacamole, 6, 129, 337, 4, 20, 29, 10
+Creamy Garlic Dip, 6, 129, 29, 1, 5, 1, 2
+Pumpkin-pecan Protein Bars, 6, 132, 143, 12, 12, 6, 25
+Maple-Walnut Protein Muffins, 6, 137, 176, 15, 15, 7, 10
+Green Tea Fudge Bars, 6, 138, 194, 21, 12, 7, 10
+Chocolate Protein Bars, 6, 140, 331, 11, 49, 13, 25
+Peanut Butter Protein Swirl Brownies, 6, 141, 234, 12, 25, 11, 40
+Avocado-Mint Protein Smoothie, 7, 130, 664, 29, 103, 22, 5
+Orange Beet Protein Shake, 7, 130, 192, 25, 25, 0, 5
+Pancake Batter Smoothie, 7, 131, 431, 24, 67, 9, 5
+Mango Green Smoothie, 7, 134, 271, 13, 37, 9, 5
+Chai-Banana Protein Shake, 7, 135, 243, 24, 30, 3, 10
+Chocolate-Espresso Protein Shake, 7, 135, 335, 24, 11, 23, 5
+Adobo Sirloin, 8, 148, 237, 39, 2, 7, 145
+Beef Stroganoff, 8, 150, 301, 29, 6, 16, 35
+Mike's Savory Burgers, 8, 151, 516, 42, 29, 26, 17
+Beef Lo Mein, 8, 152, 524, 49, 50, 14, 25
+Beef Lasagna For Two, 8, 155, 624, 41, 65, 19, 80
+Teriyaki Sirloin Steaks, 8, 156, 279, 40, 10, 7, 145
+Salisbury Steak, 8, 157, 216, 24, 11, 8, 25
+Sausage-Stuffed Mini Peppers, 8, 158, 279, 16, 35, 10, 75
+Grilled Rosemary Lamb Chops, 8, 160, 269, 20, 2, 19, 93
+Leg of Lamb, 8, 162, 441, 54, 12, 35, 85
+Pork Chops, 8, 163, 247, 38, 13, 4, 30
+Plum Pork Chops, 8, 163, 229, 39, 8, 4, 15
+Pork Tenderloin, 8, 164, 172, 26, 1, 6, 40
+Cajun Pork Chops, 8, 166, 190, 32, 6, 3, 25
+Parmesan-Crusted Pork Chops, 8, 167, 256, 42, 6, 6, 27
+Pork Tenderloin Noodle, 8, 168, 413, 28, 54, 8, 20
+Pollo Fajitas, 9, 174, 445, 46, 44, 9, 47
+Chunky Chicken Quesadilla, 9, 176, 315, 30, 28, 9, 20
+Fettuccine With Shiitake Mushrooms, 9, 177, 444, 33, 43, 13, 30
+Harvest Chicken Stew, 9, 179, 324, 44, 31, 3, 85
+Chicken Yakitori, 9, 180, 225, 41, 5, 2, 20
+Muscle Meatballs, 9, 181, 316, 40, 10, 13, 30
+Honey-Glazed Chicken, 9, 182, 216, 39, 10, 2, 30
+Thai Basil Chicken, 9, 184, 220, 40, 5, 4, 20
+Curry Chicken, 9, 186, 213, 40, 7, 3, 35
+Italian Parmesan Chicken, 9, 187, 290, 42, 6, 11, 30
+Broccoli Stir-Fry, 9, 189, 233, 41, 10, 3, 20
+Greek Pita Pizza, 9, 190, 461, 49, 38, 14, 20
+Chicken Cacciatore, 9, 191, 440, 44, 44, 7, 50
+Mexican Meatloaf, 9, 192, 343, 28, 32, 9, 70
+Chicken and Chickpeas, 9, 194, 371, 28, 41, 12, 265
+Lean Turkey Paprikash, 9, 195, 456, 35, 45, 14, 35
+Chicken Pesto Pasta, 9, 196, 412, 31, 38, 17, 25
+Aussie Chicken, 9, 198, 399, 46, 21, 14, 95
+Lemon-Garlic Shrimp, 10, 204, 255, 30, 17, 8, 20
+Creamy Fettuccine With Scallops, 10, 207, 402, 31, 56, 5, 35
+Lemon-Rosemary Salmon Steaks, 10, 208, 226, 34, 0, 9, 35
+Graham Cracker-Crusted Tilapia, 10, 210, 222, 24, 10, 10, 20
+Halibut With Leeks, 10, 211, 283, 37, 9, 11, 95
+Grilled Mahi-Mahi, 10, 212, 358, 33, 15, 19, 30
+Seared Cod, 10, 214, 296, 31, 5, 17, 30
+Seared Tuna, 10, 216, 290, 50, 15, 4, 40
+Chile Relleno Casserole, 11, 220, 226, 18, 10, 13, 55
+Vegetarian Bibimbap, 11, 223, 473, 16, 80, 10, 50
+Mozzarella Bake, 11, 224, 433, 20, 59, 18, 50
+Portobello Mushrooms, 11, 225, 438, 26, 51, 16, 65
+Bean and Corn Quesadilla, 11, 226, 347, 19, 52, 10, 40
+Black Bean Casserole, 11, 228, 402, 21, 77, 5, 50
