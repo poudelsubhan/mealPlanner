@@ -18,10 +18,6 @@ Protein Salad, 2, 94, 349, 30, 29, 15, 20
 Tropical Chicken Salad, 2, 95, 323, 42, 22, 9, 25
 Mediterranean Salad, 2, 96, 171, 10, 11, 9, 15
 Supergreen Salad, 2, 99, 420, 17, 18, 33, 10
-Low-fat Tzatziki, 3, 100, 12, 1, 1, 0, 5
-Jalapeno-Cilantro Dressing, 3, 101, 38, 2, 3, 2, 5
-Red Wine Vinaigrette, 3, 102, 123, 0, 0, 14, 5
-Cucumber Ranch Dressing, 3, 103, 42, 2, 4, 2, 5
 Carrot-Ginger Soup, 4, 106, 170, 6, 21, 7, 15
 Lentil Soup with Chicken, 4, 108, 318, 35, 39, 2, 55
 Supremely Spicy Chili, 4, 109, 460, 37, 36, 18, 150
