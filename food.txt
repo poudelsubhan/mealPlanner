@@ -32,9 +32,7 @@ Turkey Taco Lettuce Wraps, 5, 120, 196, 22, 4, 8, 25
 Avocado-Egg Salad Sandwich, 5, 122, 303, 15, 29, 15, 5
 Cuban Sandwich Quesadilla, 5, 125, 280, 22, 22, 12, 5
 Baguette with Beef and Others, 5, 124, 292, 21, 30, 9, 5
-Green N Mean Salsa, 6, 128, 128, 2, 15, 7, 10
 Perfect Spicy Guacamole, 6, 129, 337, 4, 20, 29, 10
-Creamy Garlic Dip, 6, 129, 29, 1, 5, 1, 2
 Pumpkin-pecan Protein Bars, 6, 132, 143, 12, 12, 6, 25
 Maple-Walnut Protein Muffins, 6, 137, 176, 15, 15, 7, 10
 Green Tea Fudge Bars, 6, 138, 194, 21, 12, 7, 10
