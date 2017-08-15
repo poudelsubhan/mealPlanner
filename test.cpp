@@ -1,18 +1,12 @@
-// Code for deciding what food to eat
-
-#include <vector>
-#include <iostream>
-#include <string>
+// C++ program to count all subsets with
+// given sum.
+#include <bits/stdc++.h>
 #include <sstream>
-#include <fstream>
-#include <stdlib.h>
+#include <string>
 
 using namespace std;
 
 #include "Food.h"
-
-vector<Food> foodList;
-// This vector will contain objects of type "Food"
 
 
 vector<string> split(string line, char c) {
@@ -28,12 +22,15 @@ vector<string> split(string line, char c) {
   return retVec;
 }
 
-bool readInFile(string filename) {
+vector<Food> readInFile(string filename) {
+  vector<Food> foodList;
   string line;
   ifstream file(filename.c_str());
   string delim = ",";
-  if (!file.is_open())
-    return false;
+  if (!file.is_open()) {
+    cout << "File not found, try again with the right file, the vector is empty" << endl;
+    return foodList;
+  }
   while (getline(file, line)) {
     vector<string> sp = split(line, ',');
     
@@ -43,66 +40,13 @@ bool readInFile(string filename) {
     
     foodList.push_back(item);
     }
-  return true;
+  return foodList;
 }
-
-//merge algorithm that sorts elements from least cal to highest cal
-vector<Food> merge(vector<Food> left, vector<Food> right) {
-  vector<Food> answer;
-
-  while ((left.size() != 0) && right.size() != 0) {
-    if (left[0].retCal() <= right[0].retCal()) {
-      answer.push_back(left[0]);
-      left.erase(left.begin());
-      //the erase operation is extremely inefficient on a vector
-      //but won't matter for a vector this small
-    } else {
-      answer.push_back(right[0]);
-      right.erase(right.begin());
-    }
-  }
-
-  if (left.size() != 0) {
-    for (int i = 0; i < left.size(); i++) {
-      answer.push_back(left[i]);
-    }
-    left.clear();
-  }
-
-  if (right.size() != 0) {
-    for (int i = 0; i < right.size(); i++) {
-      answer.push_back(right[i]);
-    }
-  }
-  
-  return answer;
-
-
-}
-//mergesort algorithm that recursively breaks elements to half their size
-vector<Food> mergeSort(vector<Food> items) {
-  int len = items.size();
-  if (len <= 1)
-    return items;
-
-  vector<Food> left;
-  vector<Food> right;
-  for (int i = 0; i < len; i++) {
-    if (i < (len/2))
-      left.push_back(items[i]);
-    else
-      right.push_back(items[i]);
-  }
-
-  left = mergeSort(left);
-  right = mergeSort(right);
-
-  return merge(left, right);
-
-}
-
-bool **dp;
-
+ 
+// dp[i][j] is going to store true if sum j is
+// possible with array elements from 0 to i.
+bool** dp;
+ 
 void display(const vector<int>& v)
 {
   for (int i = 0; i < v.size(); ++i) {
@@ -188,16 +132,17 @@ void printAllSubsets(int arr[], int n, int sum)
     vector<int> p;
     printSubsetsRec(arr, n-1, sum, p);
 }
-
-int main() {
-
-  bool val = readInFile("food.txt");
-  foodList = mergeSort(foodList);
+ 
+// Driver code
+int main()
+{
+  vector<Food> foodList = readInFile("food.txt");
   int n = foodList.size();
-  int sum = 500;
   int arr[n];
-  for (int i = 0; i < n; ++i)
+  for (int i = 0; i < n; ++i) {
     arr[i] = foodList[i].retCal();
+  }
+  int sum = 500;
   printAllSubsets(arr, n, sum);
   return 0;
 }
