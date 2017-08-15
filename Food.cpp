@@ -37,7 +37,7 @@ int Food::retPage() {
   return page;
 }
 
-int Food::retCal() const {
+int Food::retCal() {
   return cal;
 }
 

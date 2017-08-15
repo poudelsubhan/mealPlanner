@@ -105,9 +105,12 @@ bool **dp;
 
 void display(const vector<int>& v)
 {
+  int sum = 0;
   for (int i = 0; i < v.size(); ++i) {
         printf("%d ", v[i]);
+	sum += v[i];
   }
+  cout << sum;
   printf("\n");
 }
  
@@ -116,17 +119,17 @@ void display(const vector<int>& v)
 void printSubsetsRec(int arr[], int i, int sum, vector<int>& p)
 {
     // If we reached end and sum is non-zero. We print
-    // p[] only if arr[0] is equal to sun OR dp[0][sum]
+    // p[] only if arr[0] is equal to sum OR dp[0][sum]
     // is true.
-    if (i == 0 && sum != 0 && dp[0][sum])
+    if (i == 1 && sum != 0 && dp[1][sum])
     {
-        p.push_back(i);
+        p.push_back(arr[i]);
         display(p);
         return;
     }
  
     // If sum becomes 0
-    if (i == 0 && sum == 0)
+    if (i == 1 && sum == 0)
     {
         display(p);
         return;
@@ -145,7 +148,7 @@ void printSubsetsRec(int arr[], int i, int sum, vector<int>& p)
     // current element.
     if (sum >= arr[i] && dp[i-1][sum-arr[i]])
     {
-        p.push_back(i);
+        p.push_back(arr[i]);
         printSubsetsRec(arr, i-1, sum-arr[i], p);
     }
 }
@@ -156,29 +159,32 @@ void printAllSubsets(int arr[], int n, int sum)
     if (n == 0 || sum < 0)
        return;
  
-    // Sum 0 can always be achieved with 0 elements
-    dp = new bool*[n];
-    for (int i=0; i<n; ++i)
-    {
-        dp[i] = new bool[sum + 1];
-        dp[i][0] = true;
+    // Declaring the num of rows in the matrix
+    dp = new bool*[n+1];
+
+    for (int i = 0; i <= n; ++i) {
+      //declare the num of colums per row in the matrix
+      dp[i] = new bool[sum+1];
+
+      //You can create a sum of 0 from the empty subset
+      dp[i][0] = true;
     }
- 
-    // Sum arr[0] can be achieved with single element
-    if (arr[0] <= sum)
-       dp[0][arr[0]] = true;
- 
-    // Fill rest of the entries in dp[][]
-    for (int i = 1; i < n; ++i) {
-      for (int j = 0; j < sum + 1; ++j) {
+
+    //if the subset is 0 and the sum is greater than 0, then false
+    for (int i = 1; i <= sum; ++i) {
+      dp[0][i] = false;
+    }
+
+    for (int i = 1; i <= n; ++i) {
+      for (int j = 1; j <= sum; ++j) {
 	dp[i][j] = dp[i-1][j];
-	if (dp[i][j] == false && j >= arr[i-1])
-	  dp[i][j] = dp[i][j] || dp[i-1][j - arr[i-1]];
+	if (dp[i][j] == false && j >= arr[i-1]) {
+	  dp[i][j] = dp[i][j] || dp[i-1][j-arr[i-1]];
+	}
       }
     }
     
-    if (dp[n-1][sum] == false)
-    {
+    if (dp[n][sum] == false) {
         printf("There are no subsets with sum %d. \n", sum);
         return;
     }
@@ -186,7 +192,7 @@ void printAllSubsets(int arr[], int n, int sum)
     // Now recursively traverse dp[][] to find all
     // paths from dp[n-1][sum]
     vector<int> p;
-    printSubsetsRec(arr, n-1, sum, p);
+    printSubsetsRec(arr, n, sum, p);
 }
 
 int main() {
@@ -196,8 +202,22 @@ int main() {
   int n = foodList.size();
   int sum = 500;
   int arr[n];
-  for (int i = 0; i < n; ++i)
+  for (int i = 0; i < n; ++i) {
     arr[i] = foodList[i].retCal();
-  printAllSubsets(arr, n, sum);
+    printf ("%4d", arr[i]);
+  }
+  //printAllSubsets(arr, n, sum);
+
+  /*
+  for (int i = 0; i <= n; i++) {
+    for (int j = 0; j <= sum; j++) {
+      printf ("%1d", dp[i][j]);
+    }
+    printf("\n");
+  }
+  */
+  
+
+  
   return 0;
 }

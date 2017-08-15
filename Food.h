@@ -14,7 +14,7 @@ public:
     string retName();
     int retType();
     int retPage();
-    int retCal() const;
+    int retCal();
     int retProt();
     int retCarbs();
     int retFat();
