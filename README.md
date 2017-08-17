@@ -8,4 +8,4 @@ Given a txt file of foods, their caloric values, other nutritional values, and a
 
 food.txt is the "dictionary" file that the program reads. All of the items are from Micheal Matthews "The Shredded Chef." The format for the file is: food name, food type, page in book, calories, protein, carbs, fat, time to prepare.
 
-output.txt is an example of what the program outputs. The program, however, displays the items on the terminal instead of writing them to a file. You will have to direct the output to a file yourself. 1000 was the caloric value used for this example.
+output.txt is an example of what the program outputs. The program, however, displays the items on the terminal instead of writing them to a file. You will have to direct the output to a file yourself. 1000 was the caloric value used for this example instead of a realistic daily value such as 2000 because the resulting file would have been 90.1 MB. Each subset ends in the given caloric sum as a check.

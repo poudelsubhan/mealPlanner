@@ -212,7 +212,7 @@ int main() {
   bool val = readInFile("food.txt");
   foodList = mergeSort(foodList);
   int n = foodList.size();
-  int sum = 1000;
+  int sum = 2000;
   int arr[n];
   for (int i = 0; i < n; ++i) {
     arr[i] = foodList[i].retCal();
