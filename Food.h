@@ -1,3 +1,5 @@
+//created by Subhan Poudel, header file for object food
+
 #ifndef FOOD_H
 #define FOOD_H
 
@@ -11,7 +13,7 @@ class Food {
 public:
     Food();                 // Default Constructor
     Food(string a, int b, int c, int d, int e, int f, int g, int h);
-    ~Food();
+    ~Food();                //Destructor
     string retName();
     int retType();
     int retPage();
@@ -21,6 +23,7 @@ public:
     int retFat();
     int retTime();
 private:
+    //attributes of each food
     string name;
     int type;
     int page;

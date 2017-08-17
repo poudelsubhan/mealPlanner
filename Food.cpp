@@ -1,3 +1,4 @@
+//Created by Subhan Poudel
 
 #include <iostream>
 #include "Food.h"
@@ -28,6 +29,7 @@ Food::Food(string a, int b, int c, int d, int e, int f, int g, int h) {
 Food::~Food() {
 }
 
+//getters for each private value
 string Food::retName() {
   return name;
 }
@@ -59,3 +61,5 @@ int Food::retFat() {
 int Food::retTime() {
   return time;
 }
+
+//no need for setters
