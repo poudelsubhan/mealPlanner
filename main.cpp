@@ -1,4 +1,6 @@
 // Code for deciding what food to eat
+// Merge sort algorithm is based on the article on wikipedia
+// subset sum a collage of geek for geeks and tutorial horizon
 
 #include <vector>
 #include <iostream>
@@ -79,6 +81,7 @@ vector<Food> merge(vector<Food> left, vector<Food> right) {
 
 
 }
+
 //mergesort algorithm that recursively breaks elements to half their size
 vector<Food> mergeSort(vector<Food> items) {
   int len = items.size();
@@ -101,37 +104,46 @@ vector<Food> mergeSort(vector<Food> items) {
 
 }
 
+//the 2-D array needed to find all subsets
 bool **dp;
 
-void display(vector<Food>& v)
+//this vector will store indices of all possible answers
+vector< vector<int> > solList;
+
+void display(vector< vector<int> > &v)
 {
   int sum = 0;
-  for (int i = 0; i < v.size(); ++i) {
-    printf("%d ", v[i].retCal());
-    sum += v[i].retCal();
+  int num = v.size();
+  for (int i = 0; i < num; ++i) {
+    for (int j = 0; j < v[i].size(); ++j) {
+      printf("%s, ", foodList[v[i][j]].retName().c_str());
+      sum += foodList[v[i][j]].retCal();
+    }
+    cout << sum;
+    sum = 0;
+    printf("\n");
   }
-  cout << sum;
-  printf("\n");
 }
+
  
 // A recursive function to print all subsets with the
 // help of dp[][]. Vector p[] stores current subset.
-void printSubsetsRec(vector<Food> arr, int i, int sum, vector<Food>& p)
+void printSubsetsRec(int arr[], int i, int sum, vector<int>& p)
 {
     // If we reached end and sum is non-zero. We print
     // p[] only if arr[0] is equal to sum OR dp[0][sum]
     // is true.
     if (i == 1 && sum != 0 && dp[1][sum])
     {
-        p.push_back(arr[i-1]);
-        display(p);
+        p.push_back(i-1);
+        solList.push_back(p);
         return;
     }
  
     // If sum becomes 0
     if (i == 1 && sum == 0)
     {
-        display(p);
+        solList.push_back(p);
         return;
     }
  
@@ -140,21 +152,21 @@ void printSubsetsRec(vector<Food> arr, int i, int sum, vector<Food>& p)
     if (dp[i-1][sum])
     {
         // Create a new vector to store path
-        vector<Food> b = p;
+        vector<int> b = p;
         printSubsetsRec(arr, i-1, sum, b);
     }
  
     // If given sum can be achieved after considering
     // current element.
-    if (sum >= arr[i].retCal() && dp[i-1][sum-arr[i].retCal()])
+    if (sum >= arr[i] && dp[i-1][sum-arr[i]])
     {
-        p.push_back(arr[i]);
-        printSubsetsRec(arr, i-1, sum-arr[i].retCal(), p);
+        p.push_back(i);
+        printSubsetsRec(arr, i-1, sum-arr[i], p);
     }
 }
  
 // Prints all subsets of arr[0..n-1] with sum 0.
-void printAllSubsets(vector<Food> arr, int n, int sum)
+void printAllSubsets(int arr[], int n, int sum)
 {
     if (n == 0 || sum < 0)
        return;
@@ -178,8 +190,8 @@ void printAllSubsets(vector<Food> arr, int n, int sum)
     for (int i = 1; i <= n; ++i) {
       for (int j = 1; j <= sum; ++j) {
 	dp[i][j] = dp[i-1][j];
-	if (dp[i][j] == false && j >= arr[i-1].retCal()) {
-	  dp[i][j] = dp[i][j] || dp[i-1][j-arr[i-1].retCal()];
+	if (dp[i][j] == false && j >= arr[i-1]) {
+	  dp[i][j] = dp[i][j] || dp[i-1][j-arr[i-1]];
 	}
       }
     }
@@ -190,8 +202,8 @@ void printAllSubsets(vector<Food> arr, int n, int sum)
     }
  
     // Now recursively traverse dp[][] to find all
-    // paths from dp[n-1][sum]
-    vector<Food> p;
+    // paths from dp[n][sum]
+    vector<int> p;
     printSubsetsRec(arr, n, sum, p);
 }
 
@@ -205,8 +217,10 @@ int main() {
   for (int i = 0; i < n; ++i) {
     arr[i] = foodList[i].retCal();
   }
-  printAllSubsets(foodList, n, sum);
-  cout << "I am here." << endl;
+
+  printAllSubsets(arr, n, sum);
+  display(solList);
+  
   /*
   for (int i = 0; i <= n; i++) {
     for (int j = 0; j <= sum; j++) {
@@ -215,8 +229,5 @@ int main() {
     printf("\n");
   }
   */
-  
-
-  
   return 0;
 }
